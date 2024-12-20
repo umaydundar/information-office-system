@@ -1,0 +1,184 @@
+.red-box {
+    background-color: #ffcccc; /* Light red for pending */
+    color: #900; /* Darker red text */
+    border: 1px solid #900;
+}
+
+.gray-box {
+    background-color: #e0e0e0; /* Light gray for accepted */
+    color: #333; /* Dark text */
+    border: 1px solid #aaa;
+}
+
+.tour-box {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.month-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .month-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 15px;
+    text-align: center;
+  }
+  
+  .month-nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 5px;
+  }
+  
+  .month-nav-arrow:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  .tour-requests-container {
+    width: 100%;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .calendar-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f0f0f0;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .calendar-header-cell {
+    padding: 10px;
+    font-size: 1rem;
+    border-right: 1px solid #ccc;
+  }
+  .calendar-header-cell:last-child {
+    border-right: none;
+  }
+  
+  .calendar-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .calendar-day {
+    border-right: 1px solid #ccc;
+    min-height: 150px;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+  .calendar-day:last-child {
+    border-right: none;
+  }
+  
+  .day-cell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .day-number {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .slot-line {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: default;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .slot-line.green {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  .slot-line.gray {
+    background: #9e9e9e;
+    color: #fff;
+  }
+  
+  .slot-line.red {
+    background: #e53935;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  
+  .styled-table th, .styled-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  .styled-table th {
+    background: #f0f0f0;
+    font-weight: 600;
+  }
+  
+  .styled-table tbody tr:nth-child(even) {
+    background: #fafafa;
+  }
+  
+  .styled-table tbody tr:hover {
+    background: #f9f9f9;
+  }
+  
+  .other-month {
+    color: #aaa; /* Light gray text for other month */
+    background-color: #f9f9f9; /* Slightly different background */
+  }
+  

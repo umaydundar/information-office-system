@@ -1,0 +1,647 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*
+----starting of navbar styling 
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+.navbar {
+  width: 250px;
+  height: auto;
+  background-color: #2d2a62;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.navbar .scrolled{
+  background-color: #2d2a62;
+}
+
+.logo h2 {
+  font-size: 24px;
+}
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+.nav-links li {
+  width: 100%;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+  transition: 0.3s ease;
+  font-size: 10px;
+}
+.nav-links a:hover {
+  background-color: #34495E;
+  border-left: 4px solid #1ABC9C;
+  color:white;
+  padding-left: 10px;
+}
+.tour-name{
+  color:rgb(1, 103, 199);
+}
+.bilkent-logo{
+  position: absolute; 
+  bottom: 60px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  text-align: center;
+}
+.bilkent-logo img{
+  width: 130px;
+  height: auto;
+}
+/*
+----end of navbar styling
+*/
+/*
+----starting of todays tours styling 
+*/
+.layout-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; 
+}
+.calendar-container {
+  flex-grow: 1; 
+  padding: 20px;
+  overflow: auto; 
+  box-sizing: border-box;
+}
+.daily-tour-header {
+  margin-bottom: 20px;
+}
+.navbar-left {
+  width: 250px; 
+  background-color: #f4f4f4; 
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh; 
+}
+/*
+----end of todays tours styling 
+*/
+/*
+----start assign guide to tour page styling
+*/
+.tour-requests-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Table Styling */
+.styled-table-tour {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table-tour th,
+.styled-table-tour td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.styled-table-tour th {
+  background-color: #004080;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.styled-table-tour tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.styled-table-tour tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+.styled-table-tour td {
+  border: 1px solid #dddddd;
+}
+
+.assign-button-tour {
+  padding: 8px 12px;
+  background-color: #004080;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assign-button-tour:hover {
+  background-color: #0059b3;
+}
+
+
+.assign-button-tour.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.assign-guide-button {
+  padding: 8px 12px;
+  background-color: #004080;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assign-guide-button:hover {
+  background-color: #0059b3;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.guide-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.close-popup-button {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-popup-button:hover {
+  background-color: #d32f2f;
+}
+
+/*
+----end of assign guide to tour styling
+*/
+/*
+---Tour request page styling
+*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content button.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-content .conflict-option {
+  margin: 5px 0;
+}
+
+.modal-content .actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Make calendar cells wider */
+.calendar-container {
+  width: 100%;
+}
+
+.calendar-container .calendar-day-cell {
+  /* If you previously had width:100px, increase it: */
+  width: 150px; /* or 14% if using flexible layout */
+}
+
+.tour-requests-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #003366;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.approved-button{
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #3c74d3;
+}
+
+.action-button.approve {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+.action-button.approve:hover {
+  background-color: #218838;
+}
+
+.action-button.reject {
+  background-color: #dc3545;
+}
+
+.action-button.reject:hover {
+  background-color: #c82333;
+}
+
+/*
+---end of Tour request page styling
+*/
+/*
+Beginning of give feedback page
+*/
+/* Container for the feedback page */
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Container for the feedback page */
+.feedback-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Title for the page */
+.feedback-page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Feedback form styling */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Grouping form elements */
+.feedback-form-group {
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers the elements */
+}
+
+/* Labels for form elements */
+.feedback-form-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #555;
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Rating slider styling */
+.feedback-form-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background: #d3d3d3;
+  margin-bottom: 15px;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background 0.3s ease;
+}
+
+.feedback-form-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback-form-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.feedback-form-slider:hover {
+  background: #0066cc;
+}
+
+.feedback-form-slider:focus {
+  outline: none;
+}
+
+.slider-value {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #007bff;
+}
+
+/* Feedback textarea styling */
+.feedback-form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  resize: vertical;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.feedback-form-textarea:focus {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+  outline: none;
+}
+
+/* Submit button styling */
+.feedback-form-submit-btn {
+  padding: 12px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  max-width: 220px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-form-submit-btn:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+  transform: translateY(-2px);
+}
+
+.feedback-form-submit-btn:focus {
+  outline: none;
+  background-color: #004085;
+}
+
+/* Confirmation message styling */
+.feedback-submission-confirmation {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.feedback-submission-title {
+  color: #28a745;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/*
+End of give feedback page
+*/
+/*
+Start of guide points page
+*/
+/* Overlay for the popup */
+.gp-feedback-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures popup is above all other content */
+}
+
+/* Main popup container */
+.gp-feedback-popup-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: gp-feedback-popup-fade-in 0.3s ease-out; /* Smooth fade-in effect */
+}
+
+/* Popup title */
+.gp-feedback-popup-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Container for feedback items */
+.gp-feedback-popup-feedbacks-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+/* Individual feedback item */
+.gp-feedback-popup-feedback-item {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* Text for feedbacks */
+.gp-feedback-popup-feedback-text {
+  color: #555;
+  white-space: pre-wrap; /* Allows proper line breaks for long feedback */
+  word-wrap: break-word; /* Ensures long words don't overflow */
+}
+
+/* Message when no feedback is available */
+.gp-feedback-popup-no-feedback-text {
+  color: #999;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Container for the close button */
+.gp-feedback-popup-button-container {
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* Close button styling */
+.gp-feedback-popup-close-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes gp-feedback-popup-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*
+End of guide points page
+*/
